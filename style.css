@@ -45,3 +45,17 @@ button {
 button:hover {
   background: #005fa3;
 }
+
+<style>
+/* Style all superscripts with tooltips */
+sup[title] {
+  cursor: help;               /* Changes cursor to indicate hoverable info */
+  border-bottom: 1px dotted #555; /* Adds a subtle underline for visibility */
+  transition: color 0.2s;    /* Smooth hover color transition */
+}
+
+/* Optional: highlight on hover */
+sup[title]:hover {
+  color: #0066cc;             /* Changes color when hovered */
+}
+</style>
