@@ -48,30 +48,62 @@ button:hover {
 
 <style>
 /* Style all superscripts with tooltips */
-sup[title] {
+sup.tooltip {
+  position: relative;
   cursor: help;                      /* Hoverable info */
   border-bottom: 1px dotted #555;    /* Visual cue for hover */
   color: #d14;                       /* Invite-to-hover color */
-  font-weight: bold;                  /* Emphasis */
+  font-weight: bold;                 /* Emphasis */
   background-color: #fff4f4;         /* Subtle background to stand out */
   padding: 0 2px;
   border-radius: 2px;
   transition: color 0.2s, background-color 0.2s;
 }
 
-/* Hover effect */
-sup[title]:hover {
-  color: #0066cc;                     /* Hover color change */
-  background-color: #f0f8ff;         /* Background highlight */
+/* Tooltip text box */
+sup.tooltip .tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  max-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  padding: 4px 8px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 125%; /* place tooltip above */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 10;
+  font-size: 0.85em;
+  line-height: 1.3;
 }
 
-/* Mobile / touch devices: show a persistent hint on tap */
+/* Hover effect */
+sup.tooltip:hover {
+  color: #0066cc;                     
+  background-color: #f0f8ff;         
+}
+
+sup.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Mobile / touch devices: show tooltip on tap */
+sup.tooltip:active .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Mobile: extra hint */
 @media (hover: none) {
-  sup[title] {
-    border-bottom: 1px dashed #555;  /* Hint for tap */
+  sup.tooltip {
+    border-bottom: 1px dashed #555;  
     background-color: #fff4f4;
   }
 }
 </style>
-
 
