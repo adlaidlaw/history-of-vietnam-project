@@ -70,7 +70,7 @@ main {
 }
 
 section {
-  min-height: 100vh;
+  min-height: 35vh;
   border-bottom: 1px solid #ddd;
 }
 
