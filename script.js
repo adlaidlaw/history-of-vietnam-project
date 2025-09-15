@@ -29,7 +29,9 @@ function showEN() {
 
 window.addEventListener("load", function() {
   if (window.innerWidth <= 768) {
-    showVN(); // show Vietnamese first on mobile
+    showVN(); // show Vietnamese first
+  } else {
+    showBoth(); // desktop shows both
   }
 });
 
