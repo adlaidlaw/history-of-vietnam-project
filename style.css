@@ -131,3 +131,8 @@ button:hover {
   background: #005fa3;
 }
 
+button.active {
+  background: #005fa3;   /* darker blue */
+  font-weight: bold;
+}
+
