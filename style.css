@@ -117,6 +117,7 @@ h1, h2 {
   margin-bottom: 20px;
 }
 
+/*
 button {
   margin-right: 10px;
   padding: 6px 12px;
@@ -132,7 +133,31 @@ button:hover {
 }
 
 button.active {
-  background: #005fa3;   /* darker blue */
+  background: #005fa3;   
   font-weight: bold;
+} 
+*/
+
+.controls button {
+  background: #e0e0e0;   /* light gray */
+  color: #000;           /* black text */
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease, outline 0.2s ease;
+}
+
+.controls button:hover {
+  background: #cccccc;   /* darker gray on hover */
+}
+
+.controls button.active {
+  background: #0072ce;   /* bright accessible blue */
+  color: #fff;           /* white text */
+  font-weight: bold;
+  outline: 3px solid #004b99;   /* darker blue outline */
+  outline-offset: 2px;          /* space between outline and button */
 }
 
