@@ -1,3 +1,4 @@
+/*
 function showBoth() {
   document.getElementById("vn").classList.remove("hidden");
   document.getElementById("en").classList.remove("hidden");
@@ -10,6 +11,22 @@ function showEN() {
   document.getElementById("vn").classList.add("hidden");
   document.getElementById("en").classList.remove("hidden");
 }
+*/
+function showBoth() {
+  document.getElementById("vn").style.display = "block";
+  document.getElementById("en").style.display = "block";
+}
+
+function showVN() {
+  document.getElementById("vn").style.display = "block";
+  document.getElementById("en").style.display = "none";
+}
+
+function showEN() {
+  document.getElementById("vn").style.display = "none";
+  document.getElementById("en").style.display = "block";
+}
+
 
 // Load the header into the placeholder
 fetch("header.html")
