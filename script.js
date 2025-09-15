@@ -1,30 +1,29 @@
-/*
-function showBoth() {
-  document.getElementById("vn").classList.remove("hidden");
-  document.getElementById("en").classList.remove("hidden");
+function setActive(buttonId) {
+  // Remove 'active' from all buttons
+  document.querySelectorAll(".controls button").forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  // Add 'active' to the clicked button
+  document.getElementById(buttonId).classList.add("active");
 }
-function showVN() {
-  document.getElementById("vn").classList.remove("hidden");
-  document.getElementById("en").classList.add("hidden");
-}
-function showEN() {
-  document.getElementById("vn").classList.add("hidden");
-  document.getElementById("en").classList.remove("hidden");
-}
-*/
+
 function showBoth() {
   document.getElementById("vn").style.display = "block";
   document.getElementById("en").style.display = "block";
+  setActive("btnBoth");
 }
 
 function showVN() {
   document.getElementById("vn").style.display = "block";
   document.getElementById("en").style.display = "none";
+  setActive("btnVN");
 }
 
 function showEN() {
   document.getElementById("vn").style.display = "none";
   document.getElementById("en").style.display = "block";
+  setActive("btnEN");
 }
 
 window.addEventListener("load", function() {
