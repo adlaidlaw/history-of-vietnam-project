@@ -95,6 +95,18 @@ h1, h2 {
   margin-top: 20px;
 }
 
+/* Mobile layout */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* stack columns vertically */
+  }
+
+  /* Initially hide English column on mobile */
+  #en {
+    display: none;
+  }
+}
+
 .column {
   padding: 10px;
   border: 1px solid #ddd;
