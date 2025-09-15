@@ -27,6 +27,11 @@ function showEN() {
   document.getElementById("en").style.display = "block";
 }
 
+window.addEventListener("load", function() {
+  if (window.innerWidth <= 768) {
+    showVN(); // show Vietnamese first on mobile
+  }
+});
 
 // Load the header into the placeholder
 fetch("header.html")
