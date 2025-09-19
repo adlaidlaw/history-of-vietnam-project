@@ -161,3 +161,9 @@ button.active {
   outline-offset: 2px;          /* space between outline and button */
 }
 
+#tocDropdown {
+  padding: 5px 10px;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
