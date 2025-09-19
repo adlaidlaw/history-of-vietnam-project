@@ -7,18 +7,14 @@ const toc = [
   { title: "PIII Chapter 2", url: "PIII-Chapter 2.html" }
 ];
 
-// Render TOC dropdown
-function renderTOC(currentPage) {
-  let html = `<select id="tocDropdown" onchange="goToChapter(this.value)">`;
-  toc.forEach(chap => {
-    const selected = chap.url === currentPage ? "selected" : "";
-    html += `<option value="${chap.url}" ${selected}>${chap.title}</option>`;
+function renderTOC() {
+  let html = `
+    <input type="checkbox" id="tocToggle">
+    <label for="tocToggle" class="toc-label">Table of Contents</label>
+    <nav class="toc-menu"><ul>`;
+  toc.forEach(ch => {
+    html += `<li><a href="${ch.url}">${ch.title}</a></li>`;
   });
-  html += `</select>`;
+  html += `</ul></nav>`;
   return html;
-}
-
-// Navigate to selected chapter
-function goToChapter(page) {
-  window.location.href = page;
 }
