@@ -9,7 +9,10 @@
 <body>
   <div id="header-placeholder"></div>
   
-  <h1>PIII Chapter 2</h1>
+  <h1>
+    PIII Chapter 2
+    <span id="tocContainer"></span>
+  </h1>
 
   <div class="controls">
     <button id="btnBoth" onclick="showBoth()">Show Both</button>
@@ -101,5 +104,10 @@
   <p><a href="index.html">← Back to Index</a></p>
 
   <script src="script.js"></script>
+  <script src="toc.js"></script>
+<script>
+  const currentPage = window.location.pathname.split("/").pop();
+  document.getElementById("tocContainer").innerHTML = renderTOC(currentPage);
+</script>
 </body>
 </html>
