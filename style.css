@@ -161,9 +161,10 @@ button.active {
   outline-offset: 2px;          /* space between outline and button */
 }
 
-#tocDropdown {
-  padding: 5px 10px;
-  font-size: 1rem;
-  margin-left: 10px;
-}
+#tocToggle { display: none; }
+.toc-label { ... }
+.toc-menu { display: none; ... }
+#tocToggle:checked ~ .toc-menu { display: block; }
+#tocToggle:checked + .toc-label { background: #333; color: white; outline: 2px solid #555; }
+
 
