@@ -161,10 +161,75 @@ button.active {
   outline-offset: 2px;          /* space between outline and button */
 }
 
-#tocToggle { display: none; }
-.toc-label { ... }
-.toc-menu { display: none; ... }
-#tocToggle:checked ~ .toc-menu { display: block; }
-#tocToggle:checked + .toc-label { background: #333; color: white; outline: 2px solid #555; }
+/* TOC container positioning */
+#tocContainer {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem; /* spacing below TOC button */
+}
 
+/* TOC label/button */
+.toc-label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 2px solid #333;
+  border-radius: 6px;
+  background: #f9f9f9;
+  cursor: pointer;
+  user-select: none;
+}
 
+/* TOC dropdown menu */
+.toc-menu {
+  display: none;
+  position: absolute; /* float over content */
+  top: 100%;          /* right below label */
+  left: 0;
+  z-index: 1000;
+  min-width: 200px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #ffffff; /* solid background */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Show TOC when checkbox is checked */
+#tocToggle:checked ~ .toc-menu {
+  display: block;
+}
+
+/* Style TOC links */
+.toc-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toc-menu li {
+  margin: 0.25rem 0;
+}
+
+.toc-menu a {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+.toc-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Active state styling for label */
+#tocToggle:checked + .toc-label {
+  background: #333;
+  color: white;
+  outline: 2px solid #555;
+}
+
+/* Optional: make it responsive on mobile */
+@media (max-width: 600px) {
+  .toc-menu {
+    min-width: 150px;
+    font-size: 0.9rem;
+  }
+}
