@@ -4,6 +4,7 @@ const toc = [
   { title: "PI Chapter 2", url: "PI-Chapter 2.html" },
   { title: "PI Chapter 3", url: "PI-Chapter 3.html" }
   { title: "PI Chapter 4", url: "PI-Chapter 4.html" }
+  { title: "PIII Chapter 2", url: "PIII-Chapter 2.html" }
 ];
 
 // Render TOC dropdown
