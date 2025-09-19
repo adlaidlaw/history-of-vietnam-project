@@ -233,3 +233,12 @@ button.active {
     font-size: 0.9rem;
   }
 }
+
+/* Hide the actual checkbox */
+#tocToggle {
+  position: absolute; /* remove from layout flow */
+  opacity: 0;         /* invisible but still focusable/clickable */
+  width: 0;
+  height: 0;
+}
+
