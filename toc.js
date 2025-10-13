@@ -12,6 +12,8 @@ const toc = [
   { title: "PII Chapter 6", url: "PII-Chapter 6.html" },
   { title: "PIII Chapter 1", url: "PIII-Chapter 2.html" },
   { title: "PIII Chapter 2", url: "PIII-Chapter 2.html" },
+  { title: "PIII Chapter 3", url: "PIII-Chapter 3.html" },
+  { title: "PIII Chapter 4", url: "PIII-Chapter 4.html: },
 ];
 
 function renderTOC() {
